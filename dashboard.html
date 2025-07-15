@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TechCMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-rocket me-2"></i>TechCMS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle me-1"></i>Admin
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Layout -->
+    <div class="container-fluid" style="margin-top: 76px;">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 dashboard-sidebar">
+                <div class="container">
+                    <h6 class="text-uppercase text-muted mb-3">Main</h6>
+                    <ul class="dashboard-nav">
+                        <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                        <li><a href="#"><i class="fas fa-file-alt"></i>Content</a></li>
+                        <li><a href="#"><i class="fas fa-images"></i>Media</a></li>
+                        <li><a href="#"><i class="fas fa-comments"></i>Comments</a></li>
+                    </ul>
+                    
+                    <h6 class="text-uppercase text-muted mb-3 mt-4">Management</h6>
+                    <ul class="dashboard-nav">
+                        <li><a href="#"><i class="fas fa-users"></i>Users</a></li>
+                        <li><a href="#"><i class="fas fa-palette"></i>Themes</a></li>
+                        <li><a href="#"><i class="fas fa-plug"></i>Plugins</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i>Settings</a></li>
+                    </ul>
+                    
+                    <h6 class="text-uppercase text-muted mb-3 mt-4">Analytics</h6>
+                    <ul class="dashboard-nav">
+                        <li><a href="#"><i class="fas fa-chart-line"></i>Analytics</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i>SEO</a></li>
+                        <li><a href="#"><i class="fas fa-chart-pie"></i>Reports</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 dashboard-content">
+                <!-- Welcome Section -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h1 class="h3 mb-0">Welcome back, Admin!</h1>
+                        <p class="text-muted">Here's what's happening with your website today.</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-plus me-2"></i>New Post
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="row g-4 mb-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-card">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="stats-number text-primary">12,345</div>
+                                    <div class="stats-label">Page Views</div>
+                                </div>
+                                <div class="stats-icon">
+                                    <i class="fas fa-eye fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <span class="text-success"><i class="fas fa-arrow-up"></i> 12.5%</span>
+                                <small class="text-muted">from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-card">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="stats-number text-success">2,847</div>
+                                    <div class="stats-label">Unique Visitors</div>
+                                </div>
+                                <div class="stats-icon">
+                                    <i class="fas fa-users fa-2x text-success"></i>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <span class="text-success"><i class="fas fa-arrow-up"></i> 8.2%</span>
+                                <small class="text-muted">from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-card">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="stats-number text-warning">156</div>
+                                    <div class="stats-label">Published Posts</div>
+                                </div>
+                                <div class="stats-icon">
+                                    <i class="fas fa-file-alt fa-2x text-warning"></i>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <span class="text-success"><i class="fas fa-arrow-up"></i> 5.1%</span>
+                                <small class="text-muted">from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="stats-card">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="stats-number text-danger">23</div>
+                                    <div class="stats-label">Comments</div>
+                                </div>
+                                <div class="stats-icon">
+                                    <i class="fas fa-comments fa-2x text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <span class="text-danger"><i class="fas fa-arrow-down"></i> 3.4%</span>
+                                <small class="text-muted">from last month</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts and Content Row -->
+                <div class="row g-4 mb-4">
+                    <!-- Analytics Chart -->
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Analytics Overview</h5>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="analyticsChart" style="height: 300px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Recent Activity</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="activity-item">
+                                    <div class="activity-icon bg-primary">
+                                        <i class="fas fa-plus"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="mb-0">New post published</p>
+                                        <small class="text-muted">2 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon bg-success">
+                                        <i class="fas fa-comment"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="mb-0">New comment on "Web Development"</p>
+                                        <small class="text-muted">4 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon bg-warning">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="mb-0">New user registered</p>
+                                        <small class="text-muted">6 hours ago</small>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon bg-info">
+                                        <i class="fas fa-edit"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p class="mb-0">Post updated</p>
+                                        <small class="text-muted">8 hours ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Management -->
+                <div class="row g-4">
+                    <!-- Recent Posts -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5 class="card-title mb-0">Recent Posts</h5>
+                                <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Title</th>
+                                                <th>Status</th>
+                                                <th>Date</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://via.placeholder.com/40x40/0d6efd/ffffff?text=1" class="rounded me-3" alt="Post">
+                                                        <div>
+                                                            <h6 class="mb-0">Modern Web Development</h6>
+                                                            <small class="text-muted">Lorem ipsum dolor sit amet...</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-success">Published</span></td>
+                                                <td>Dec 15, 2023</td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                                            <i class="fas fa-ellipsis-h"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>View</a></li>
+                                                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://via.placeholder.com/40x40/198754/ffffff?text=2" class="rounded me-3" alt="Post">
+                                                        <div>
+                                                            <h6 class="mb-0">CMS Best Practices</h6>
+                                                            <small class="text-muted">Essential tips for content management...</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-warning">Draft</span></td>
+                                                <td>Dec 12, 2023</td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                                            <i class="fas fa-ellipsis-h"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>Preview</a></li>
+                                                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://via.placeholder.com/40x40/dc3545/ffffff?text=3" class="rounded me-3" alt="Post">
+                                                        <div>
+                                                            <h6 class="mb-0">Security Guide</h6>
+                                                            <small class="text-muted">Complete website security guide...</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-success">Published</span></td>
+                                                <td>Dec 10, 2023</td>
+                                                <td>
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                                            <i class="fas fa-ellipsis-h"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>View</a></li>
+                                                            <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Quick Actions</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-sm-6">
+                                        <div class="quick-action-card">
+                                            <i class="fas fa-plus fa-2x text-primary mb-3"></i>
+                                            <h6>Create New Post</h6>
+                                            <p class="text-muted small">Write and publish a new blog post</p>
+                                            <button class="btn btn-sm btn-primary">Create</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="quick-action-card">
+                                            <i class="fas fa-images fa-2x text-success mb-3"></i>
+                                            <h6>Upload Media</h6>
+                                            <p class="text-muted small">Add images, videos, and files</p>
+                                            <button class="btn btn-sm btn-success">Upload</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="quick-action-card">
+                                            <i class="fas fa-users fa-2x text-warning mb-3"></i>
+                                            <h6>Manage Users</h6>
+                                            <p class="text-muted small">Add or edit user accounts</p>
+                                            <button class="btn btn-sm btn-warning">Manage</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="quick-action-card">
+                                            <i class="fas fa-cog fa-2x text-info mb-3"></i>
+                                            <h6>Site Settings</h6>
+                                            <p class="text-muted small">Configure your website settings</p>
+                                            <button class="btn btn-sm btn-info">Settings</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="mt-5 pt-4 border-top">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-muted small">&copy; 2023 TechCMS. All rights reserved.</p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <p class="text-muted small">Version 2.1.0 | <a href="#" class="text-decoration-none">Documentation</a> | <a href="#" class="text-decoration-none">Support</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Dashboard specific chart initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('analyticsChart');
+            if (ctx) {
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                        datasets: [{
+                            label: 'Page Views',
+                            data: [1200, 1900, 3000, 5000, 2000, 3000],
+                            borderColor: '#0d6efd',
+                            backgroundColor: 'rgba(13, 110, 253, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }, {
+                            label: 'Unique Visitors',
+                            data: [800, 1200, 1800, 2500, 1200, 1800],
+                            borderColor: '#198754',
+                            backgroundColor: 'rgba(25, 135, 84, 0.1)',
+                            tension: 0.4,
+                            fill: true
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'bottom'
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
